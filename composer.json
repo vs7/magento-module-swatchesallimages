@@ -1,0 +1,27 @@
+{
+    "name":"vs7/magento-module-swatchesallimages",
+    "type":"magento-module",
+    "version":"0.1.0",
+    "license": "OSL-3.0",
+    "description": "Magento module. Adds media gallery images to all swatches at product view page.",
+    "keywords": [
+        "magento",
+        "magento1",
+        "vs7",
+        "swatches",
+        "image",
+        "media",
+        "gallery"
+    ],
+    "authors": [
+        {
+            "name": "VS7, Vladislav Gevlich",
+            "email": "vs7develop@gmail.com",
+            "homepage": "https://vs7.io"
+        }
+    ],
+    "homepage": "https://github.com/vs7/magento-module-swatchesallimages",
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

@@ -1,0 +1,4 @@
+app/code/community/VS7/SwatchesAllImages                            app/code/community/VS7/SwatchesAllImages
+app/etc/modules/VS7_SwatchesAllImages.xml                           app/etc/modules/VS7_SwatchesAllImages.xml
+app/design/frontend/rwd/default/layout/vs7_swatchesallimages.xml    app/design/frontend/rwd/default/layout/vs7_swatchesallimages.xml
+app/design/frontend/rwd/default/template/vs7_swatchesallimages      app/design/frontend/rwd/default/template/vs7_swatchesallimages
