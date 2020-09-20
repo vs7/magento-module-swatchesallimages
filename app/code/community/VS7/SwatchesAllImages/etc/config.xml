@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <VS7_SwatchesAllImages>
+            <version>0.1.0</version>
+        </VS7_SwatchesAllImages>
+    </modules>
+    <global>
+        <blocks>
+            <vs7_swatchesallimages>
+                <class>VS7_SwatchesAllImages_Block</class>
+            </vs7_swatchesallimages>
+        </blocks>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <vs7_swatchesallimages>
+                    <file>vs7_swatchesallimages.xml</file>
+                </vs7_swatchesallimages>
+            </updates>
+        </layout>
+    </frontend>
+</config>

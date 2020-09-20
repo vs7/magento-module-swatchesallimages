@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <PRODUCT_TYPE_configurable>
+        <reference name="product.info.media.after">
+            <block type="vs7_swatchesallimages/media" name="vs7_swatchesallimages.media" template="vs7_swatchesallimages/media.phtml" />
+        </reference>
+    </PRODUCT_TYPE_configurable>
+</layout>

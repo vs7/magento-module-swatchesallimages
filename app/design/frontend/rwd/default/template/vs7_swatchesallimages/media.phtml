@@ -1,0 +1,41 @@
+<script type="text/javascript">
+var vs7 = vs7 || {};
+
+vs7.SwatchesAllImages = Class.create();
+vs7.SwatchesAllImages = {
+    productGalleryImages: {},
+    setGalleryImagesFallback: function(galleryImagesFallback) {
+        this.productGalleryImages = galleryImagesFallback;
+    },
+    buildHtml: function(childProductId) {
+        if (childProductId === undefined) return;
+        var html = '<div id="more-views" class="more-views">';
+        var data = this.productGalleryImages[childProductId];
+        for (var i =0; i < data.length; i++) {
+            html += '<div class="item"><a href="' + data[i]['image'] + '" class="cloud-zoom-gallery" data-image="' + data[i]['image'] + '"><img src="' + data[i]['image'] + '" alt="' + data[i]['label'] + '" title="' + data[i]['label'] + '" /></a></div>';
+        }
+        return html + '</div>';
+    }
+};
+
+Product.ConfigurableSwatches.prototype.updateSelect = function(attr) {
+    var selectedChildProductId = attr._e.selectedOption.allowedProducts[0];
+    if (selectedChildProductId === undefined) return;
+    $('more-views').replace(vs7.SwatchesAllImages.buildHtml(selectedChildProductId));
+    // fire select change event
+    // this will trigger the validation of the select
+    // only fire if this attribute has had a selected option at one time
+    if (attr._e.selectedOption !== false && attr._e.optionSelect) {
+        this._F.nativeSelectChange = false;
+        ConfigurableMediaImages.updateImage(attr._e.optionSelect);
+        this.productConfig.handleSelectChange(attr._e.optionSelect);
+        this._F.nativeSelectChange = true;
+    }
+    $j(document).trigger('reload-gallery');
+};
+
+$j(document).on('configurable-media-images-init', function() {
+    var galleryImagesFallback = <?php echo $this->getJson();?>;
+    vs7.SwatchesAllImages.setGalleryImagesFallback(galleryImagesFallback);
+});
+</script>
